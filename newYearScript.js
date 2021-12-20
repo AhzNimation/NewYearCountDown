@@ -54,7 +54,8 @@ function CountDown() {
   sMenitOut = lessThan(sMenit, sMenitOut);
   sDetikOut = lessThan(sDetik, sDetikOut);
 
-  document.getElementById("year").textContent = tahun;
+  document.getElementById("year1").textContent = tahun;
+  document.getElementById("year2").textContent = tahun;
   document.getElementById("CountDownTxt").textContent = sTahunOut + ":" + sBulanOut + ":" + sTanggalOut + ":" + sJamOut + ":" + sMenitOut + ":" + sDetikOut;
   setTimeout(CountDown, 1000);
 }
