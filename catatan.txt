@@ -1,0 +1,30 @@
+tahun = 2021
+next year 2022
+0
+rumus tahun = 2022 - year - 1
+
+bulan sekarang desembar
+bulannya next year kan januari
+0
+rumus bulan = 13 - 12-1
+
+tanggal sekarang 20
+tanggal nya next year 1
+11
+rumus tanggal = 31 - tanggal - 1
+
+jam misalnya jam 17
+jam nya next year 0
+7
+rumus jam = 24 - jam
+
+menit misalnya 20
+menit nya next year 0
+40
+rumus menit = 60 - menit
+
+detik misalnya 48
+detik nya next year 0
+12
+rumus detik = 60 - detik
+

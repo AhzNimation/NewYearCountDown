@@ -1,0 +1,102 @@
+.center{
+    width: max-content;
+    margin: auto;
+    text-align: center;
+}
+.container{
+    margin-top: 210px;
+}
+.container .title{
+    color: rgb(255, 136, 0);
+    text-shadow: 0 0 10px rgb(255, 153, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+.container #CountDownTxt{
+    color: rgb(255, 150, 52);
+    text-shadow: 0 0 10px rgb(255, 200, 118);
+    font-family: 'Times New Roman', Times, serif;
+}
+.container #CountDownContainer{
+    width: 200px;
+    height: 50px;
+}
+.container *{
+    background-color: rgb(107, 52, 0);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 186, 129);
+}
+.container .emojiD{
+    background-color: rgb(107, 52, 0);
+    text-shadow: 0 0 10px rgb(255, 200, 118);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 186, 129);
+}
+#HNY button{
+    width: 150px;
+    margin-top: 10px;
+    color: rgb(255, 136, 0);
+    text-shadow: 0 0 10px rgb(255, 153, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+body{
+    background: linear-gradient(150deg, rgb(158, 76, 0),rgb(255, 150, 52));
+    min-height: 650px;
+}
+footer{
+    position: sticky;
+    display: flex;
+    flex-wrap: wrap;
+    top: 100%;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(233, 124, 0);
+    text-shadow: 0 0 4px rgb(230, 138, 0);
+    background: linear-gradient(-25deg ,rgb(107, 52, 0), rgb(131, 63, 0));
+    border: 2px solid rgb(255, 186, 129);
+    border-radius: 12px;
+}
+footer a:hover{
+    animation-duration: 1s;
+    animation-name: footer-anim1;
+    text-decoration: underline;
+    color: rgb(255, 156, 43);
+    text-shadow: 0 0 3px rgb(218, 105, 0), 0 0 3px rgb(230, 138, 0);
+}
+footer a, footer a:visited{
+    animation-duration: 1s;
+    animation-name: footer-anim2;
+    text-decoration: none;
+    color: rgb(233, 124, 0);
+    text-shadow: 0 0 8px rgb(230, 138, 0);
+}
+@keyframes footer-anim1{
+    from{
+        text-decoration: none;
+        color: rgb(233, 124, 0);
+        text-shadow: 0 0 8px rgb(230, 138, 0);
+    }
+    to{
+        text-decoration: underline;
+        color: rgb(255, 156, 43);
+        text-shadow: 0 0 3px rgb(218, 105, 0), 0 0 3px rgb(230, 138, 0);
+    }
+}
+@keyframes footer-anim2{
+    from{
+        text-decoration: underline;
+        color: rgb(255, 156, 43);
+        text-shadow: 0 0 3px rgb(218, 105, 0), 0 0 3px rgb(230, 138, 0);
+    }
+    to{
+        text-decoration: none;
+        color: rgb(233, 124, 0);
+        text-shadow: 0 0 8px rgb(230, 138, 0);
+    }
+}
+/* todo To hide Something */
+.hide{
+    display: none;
+}
