@@ -57,10 +57,10 @@ function CountDown() {
   sMenitOut = lessThan(sMenit, sMenitOut);
   sDetikOut = lessThan(sDetik, sDetikOut);
 
-  y1.textContent = tahun;
-  y2.textContent = tahun;
+  y1.innerHTML = tahun;
+  y2.innerHTML = tahun;
 
-  document.getElementById("CountDownTxt").textContent = sTahunOut + ":" + sBulanOut + ":" + sTanggalOut + ":" + sJamOut + ":" + sMenitOut + ":" + sDetikOut;
+  document.getElementById("CountDownTxt").innerHTML = sTahunOut + ":" + sBulanOut + ":" + sTanggalOut + ":" + sJamOut + ":" + sMenitOut + ":" + sDetikOut;
   setTimeout(CountDown, 1000);
 }
 function bulanf(tahun, bulan) {
