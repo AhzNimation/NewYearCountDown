@@ -1,6 +1,9 @@
 const NewYearCountDown = document.getElementById("NYCD");
 const HappyNewYear = document.getElementById("HNY");
 
+const y1 = document.getElementById("year1");
+const y2 = document.getElementById("year2");
+
 function CountDown() {
   var date = new Date();
   var time = new Date(date.getTime());
@@ -54,8 +57,9 @@ function CountDown() {
   sMenitOut = lessThan(sMenit, sMenitOut);
   sDetikOut = lessThan(sDetik, sDetikOut);
 
-  document.getElementById("year1").textContent = tahun;
-  document.getElementById("year2").textContent = tahun;
+  y1.textContent = tahun;
+  y2.textContent = tahun;
+
   document.getElementById("CountDownTxt").textContent = sTahunOut + ":" + sBulanOut + ":" + sTanggalOut + ":" + sJamOut + ":" + sMenitOut + ":" + sDetikOut;
   setTimeout(CountDown, 1000);
 }
