@@ -1,14 +1,11 @@
-.center{
-    width: max-content;
-    margin: auto;
-    text-align: center;
+#NYCD, #HNY{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .container{
     margin-top: 210px;
 }
 .container .title{
-    color: rgb(255, 136, 0);
-    text-shadow: 0 0 10px rgb(255, 153, 0);
     font-family: 'Times New Roman', Times, serif;
 }
 .container #CountDownTxt{
@@ -17,7 +14,7 @@
     font-family: 'Times New Roman', Times, serif;
 }
 .container #CountDownContainer{
-    width: 200px;
+    width: 220px;
     height: 50px;
 }
 .container *{
@@ -33,6 +30,14 @@
     border-radius: 10px;
     border: 2px solid rgb(255, 186, 129);
 }
+#SNYFW{
+    width: 170px;
+    margin-top: 10px;
+    color: rgb(255, 136, 0);
+    text-shadow: 0 0 10px rgb(255, 153, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
 #HNY button{
     width: 150px;
     margin-top: 10px;
@@ -40,6 +45,10 @@
     text-shadow: 0 0 10px rgb(255, 153, 0);
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
+}
+*{
+    color: rgb(255, 136, 0);
+    text-shadow: 0 0 10px rgb(255, 153, 0);
 }
 body{
     background: linear-gradient(150deg, rgb(158, 76, 0),rgb(255, 150, 52));
@@ -72,6 +81,17 @@ footer a, footer a:visited{
     color: rgb(233, 124, 0);
     text-shadow: 0 0 8px rgb(230, 138, 0);
 }
+.canvasContainer{
+    background: none;
+    border: none;
+}
+.canvasContainer canvas {
+	cursor: crosshair;
+	display: block;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 @keyframes footer-anim1{
     from{
         text-decoration: none;
@@ -96,7 +116,42 @@ footer a, footer a:visited{
         text-shadow: 0 0 8px rgb(230, 138, 0);
     }
 }
+
+
 /* todo To hide Something */
+.center{
+    width: max-content;
+    margin: auto;
+    text-align: center;
+}
 .hide{
     display: none;
+}
+
+@media (max-width: 450px){
+    .center{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+    .container #CountDownContainer, .container #CountDownContainer *{
+        width: 85%;
+        height: max-content;
+    }
+    #SNYFW{
+        width: 90%;
+        margin-top: 10px;
+        color: rgb(255, 136, 0);
+        text-shadow: 0 0 10px rgb(255, 153, 0);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+    }
+    #HNY button{
+        width: 150px;
+        margin-top: 10px;
+        color: rgb(255, 136, 0);
+        text-shadow: 0 0 10px rgb(255, 153, 0);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+    }
 }

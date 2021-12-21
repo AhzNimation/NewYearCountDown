@@ -4,6 +4,10 @@ const HappyNewYear = document.getElementById("HNY");
 const y1 = document.getElementById("year1");
 const y2 = document.getElementById("year2");
 
+const SeeFireWorkBtn = document.getElementById("SNYFW");
+
+var seeNewYearFireWork = false;
+
 function CountDown() {
   var date = new Date();
   var time = new Date(date.getTime());
@@ -14,17 +18,20 @@ function CountDown() {
   var menit = time.getMinutes();
   var detik = time.getSeconds();
 
-  if (tahun == tujuanTahun){
-    NewYearCountDown.classList.add("hide");
-    HappyNewYear.classList.remove("hide");
-  }
-
   var tujuanTahun = tahun + 1;
   var tujuanBulan = 1;
   var tujuanTanggal = 1;
   var tujuanJam = 0;
   var tujuanMenit = 0;
   var tujuanDetik = 0;
+
+  if (((tujuanTahun <= tahun) && (tujuanBulan <= bulan) && (tujuanTanggal <= tanggal)) || ((bulan == 1) && (seeNewYearFireWork == true))) {
+    NewYearCountDown.classList.add("hide");
+    HappyNewYear.classList.remove("hide");
+    SeeFireWorkBtn.classList.remove("hide");
+  } else{
+    SeeFireWorkBtn.classList.add("hide");
+  }
 
   // S... | S = selisih
   var sTahun = tujuanTahun - tahun - 1;
@@ -60,7 +67,7 @@ function CountDown() {
   y1.innerHTML = tahun;
   y2.innerHTML = tahun;
 
-  document.getElementById("CountDownTxt").innerHTML = sTahunOut + ":" + sBulanOut + ":" + sTanggalOut + ":" + sJamOut + ":" + sMenitOut + ":" + sDetikOut;
+  document.getElementById("CountDownTxt").innerHTML = sTahunOut + " : " + sBulanOut + " : " + sTanggalOut + " : " + sJamOut + " : " + sMenitOut + " : " + sDetikOut;
   setTimeout(CountDown, 1000);
 }
 function bulanf(tahun, bulan) {
@@ -95,5 +102,13 @@ function lessThan(invalue, outvalue) {
 function back() {
   NewYearCountDown.classList.remove("hide");
   HappyNewYear.classList.add("hide");
+  seeNewYearFireWork = false;
+}
+function seeFireWork() {
+  if ((bulan == 1) && (seeNewYearFireWork == true)) {
+    NewYearCountDown.classList.add("hide");
+    HappyNewYear.classList.remove("hide");
+    seeNewYearFireWork = false;
+  }
 }
 CountDown();
