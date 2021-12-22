@@ -19,7 +19,7 @@ function CountDown() {
   var detik = time.getSeconds();
   var miliDetik = time.getMilliseconds();
 
-  var tujuanTahun = tahun;
+  var tujuanTahun = tahun + 1;
   var tujuanBulan = 1;
   var tujuanTanggal = 1;
   var tujuanJam = 0;
