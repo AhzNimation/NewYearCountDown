@@ -19,7 +19,7 @@ function CountDown() {
   var detik = time.getSeconds();
   var miliDetik = time.getMilliseconds();
 
-  var tujuanTahun = tahun + 1;
+  var tujuanTahun = tahun;
   var tujuanBulan = 1;
   var tujuanTanggal = 1;
   var tujuanJam = 0;
@@ -27,11 +27,14 @@ function CountDown() {
   var tujuanDetik = 0;
   var tujuanMD = 0;
 
-  if (((tujuanTahun <= tahun) && (tujuanBulan <= bulan) && (tujuanTanggal <= tanggal)) || ((bulan == 1) && (seeNewYearFireWork == true))) {
+  if (((tujuanTahun <= tahun) && (tujuanBulan <= bulan) && (tujuanTanggal <= tanggal) || (bulan == 1)) && (seeNewYearFireWork == true)) {
     NewYearCountDown.classList.add("hide");
     HappyNewYear.classList.remove("hide");
     SeeFireWorkBtn.classList.remove("hide");
-  } else{
+  } 
+  if ((tujuanTahun <= tahun) && (tujuanBulan <= bulan) && (tujuanTanggal <= tanggal) || (bulan == 1)){
+    SeeFireWorkBtn.classList.remove("hide");
+  } else {
     SeeFireWorkBtn.classList.add("hide");
   }
 
@@ -116,11 +119,9 @@ function back() {
   seeNewYearFireWork = false;
 }
 function seeFireWork() {
-  if ((bulan == 1) && (seeNewYearFireWork == true)) {
     NewYearCountDown.classList.add("hide");
     HappyNewYear.classList.remove("hide");
-    seeNewYearFireWork = false;
-  }
+    seeNewYearFireWork = true;
 }
 CountDown();
 
