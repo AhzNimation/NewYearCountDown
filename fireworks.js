@@ -1,7 +1,6 @@
 /* SOURCE CODE
 https://codepen.io/whqet/pen/Auzch */
 
-
 // when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval
 // not supported in all browsers though and sometimes needs a prefix, so we need a shim
 window.requestAnimFrame = ( function() {
