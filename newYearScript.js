@@ -90,9 +90,9 @@ function bulanf(tahun, bulan) {
   return maxTanggal;
 }
 function TimeSetV2(tujuanNextVal, nextVal, maxNextVal, output, tujuanVal, defaultVar){
-  if(tujuanNextVal < nextVal){
+  if(tujuanNextVal <= nextVal){
     output = tujuanVal + maxNextVal - defaultVar - 1;
-  } else if (tujuanNextVal >= nextVal){
+  } else if (tujuanNextVal > nextVal){
     output = tujuanVal - defaultVar;
   } return output;
 }
